@@ -109,22 +109,6 @@ static void showBanner_logo(LogoMode mode) {
     PrintAndLogEx(NORMAL, BANNERMSG3);
 }
 
-static uint8_t detect_current_lang(void) {
-#ifndef _WIN32
-    const char *lang = setlocale(LC_ALL, "");
-    if (lang == NULL) {
-        return 1;
-    }
-    if (memcmp(lang, "fr", 2) == 0) {
-        return 2;
-    }
-    if (memcmp(lang, "es", 2) == 0) {
-        return 3;
-    }
-#endif
-    return 1;
-}
-
 static const char *get_quote(void) {
 
     const char *quotes_en[] = {
