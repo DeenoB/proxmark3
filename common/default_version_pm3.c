@@ -26,7 +26,7 @@ const struct version_information_t SECTVERSINFO g_version_information = {
     1, /* version 1 */
     0, /* version information not present */
     2, /* cleanliness couldn't be determined */
-    "Iceman/master/unknown",
+    "DeenoB/master/unknown",
     "1970-01-01 00:00:00",
     "no sha256"
 };

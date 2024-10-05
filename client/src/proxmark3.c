@@ -80,25 +80,28 @@ static void showBanner_logo(LogoMode mode) {
             break;
         }
         case ANSI: {
-            PrintAndLogEx(NORMAL, "  " _CYAN_("8888888b.  888b     d888  .d8888b.   "));
-            PrintAndLogEx(NORMAL, "  " _CYAN_("888   Y88b 8888b   d8888 d88P  Y88b  "));
-            PrintAndLogEx(NORMAL, "  " _CYAN_("888    888 88888b.d88888      .d88P  "));
-            PrintAndLogEx(NORMAL, "  " _CYAN_("888   d88P 888Y88888P888     8888\"  "));
-            PrintAndLogEx(NORMAL, "  " _CYAN_("8888888P\"  888 Y888P 888      \"Y8b.  "));
-            PrintAndLogEx(NORMAL, "  " _CYAN_("888        888  Y8P  888 888    888  "));
-            PrintAndLogEx(NORMAL, "  " _CYAN_("888        888   \"   888 Y88b  d88P") " " BANNERMSG1);
-            PrintAndLogEx(NORMAL, "  " _CYAN_("888        888       888  \"Y8888P\"") " " BANNERMSG2);
+            PrintAndLogEx(NORMAL, "  " _CYAN_("████████▄     ▄████████    ▄████████ ███▄▄▄▄    ▄██████▄ ")); 
+            PrintAndLogEx(NORMAL, "  " _CYAN_("███   ▀███   ███    ███   ███    ███ ███▀▀▀██▄ ███    ███")); 
+            PrintAndLogEx(NORMAL, "  " _CYAN_("███    ███   ███    █▀    ███    █▀  ███   ███ ███    ███")); 
+            PrintAndLogEx(NORMAL, "  " _CYAN_("███    ███  ▄███▄▄▄      ▄███▄▄▄     ███   ███ ███    ███")); 
+            PrintAndLogEx(NORMAL, "  " _CYAN_("███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀     ███   ███ ███    ███")); 
+            PrintAndLogEx(NORMAL, "  " _CYAN_("███    ███   ███    █▄    ███    █▄  ███   ███ ███    ███")); 
+            PrintAndLogEx(NORMAL, "  " _CYAN_("███   ▄███   ███    ███   ███    ███ ███   ███ ███    ███") " " BANNERMSG1);
+            PrintAndLogEx(NORMAL, "  " _CYAN_("████████▀    ██████████   ██████████  ▀█   █▀   ▀██████▀ ") " " BANNERMSG2);  
             break;
         }
+
+      
+
         case ASCII: {
-            PrintAndLogEx(NORMAL, "  8888888b.  888b     d888  .d8888b.     ");
-            PrintAndLogEx(NORMAL, "  888   Y88b 8888b   d8888 d88P  Y88b    ");
-            PrintAndLogEx(NORMAL, "  888    888 88888b.d88888      .d88P    ");
-            PrintAndLogEx(NORMAL, "  888   d88P 888Y88888P888     8888\"    ");
-            PrintAndLogEx(NORMAL, "  8888888P\"  888 Y888P 888      \"Y8b.  ");
-            PrintAndLogEx(NORMAL, "  888        888  Y8P  888 888    888    ");
-            PrintAndLogEx(NORMAL, "  888        888   \"   888 Y88b  d88P " BANNERMSG1);
-            PrintAndLogEx(NORMAL, "  888        888       888  \"Y8888P\" " BANNERMSG2);
+            PrintAndLogEx(NORMAL, "  ████████▄     ▄████████    ▄████████ ███▄▄▄▄    ▄██████▄ ");
+            PrintAndLogEx(NORMAL, "  ███   ▀███   ███    ███   ███    ███ ███▀▀▀██▄ ███    ███");
+            PrintAndLogEx(NORMAL, "  ███    ███   ███    █▀    ███    █▀  ███   ███ ███    ███");
+            PrintAndLogEx(NORMAL, "  ███    ███  ▄███▄▄▄      ▄███▄▄▄     ███   ███ ███    ███");
+            PrintAndLogEx(NORMAL, "  ███    ███ ▀▀███▀▀▀     ▀▀███▀▀▀     ███   ███ ███    ███");
+            PrintAndLogEx(NORMAL, "  ███    ███   ███    █▄    ███    █▄  ███   ███ ███    ███");
+            PrintAndLogEx(NORMAL, "  ███   ▄███   ███    ███   ███    ███ ███   ███ ███    ███" BANNERMSG1);
+            PrintAndLogEx(NORMAL, "  ████████▀    ██████████   ██████████  ▀█   █▀   ▀██████▀ " BANNERMSG2);
             break;
         }
     }
@@ -125,84 +128,21 @@ static uint8_t detect_current_lang(void) {
 static const char *get_quote(void) {
 
     const char *quotes_en[] = {
-        "Fund creativity, empower dreams",
-        "Invest in open innovation",
-        "Donate, empower, grow, sustain",
-        "Back global innovation today",
-        "Fuel open source revolution",
-        "Contribute funds, drive progress",
-        "Sponsor innovation, build tomorrow",
-        "Consider supporting: fund innovation",
-        "Your donation fuels progress",
-        "Empower dreams with your support",
-        "Join us: finance creative freedom",
-        "Make an impact: donate today",
-        "Help us drive open innovation",
-        "Your support, our future",
-        "Invest in a better tomorrow",
-        "Every contribution powers change",
-        "Support us, shape the future",
-        "Ignite change: support open-source creativity",
-        "Together, we can innovate without limits",
-    };
-
-    const char *quotes_fr[] = {
-        "Financez la créativité, donnez pouvoir aux rêves",
-        "Investissez dans l'innovation ouverte",
-        "Donnez, habilitez, croissez, soutenez",
-        "Soutenez l'innovation mondiale aujourd'hui",
-        "Alimentez la révolution open source",
-        "Contribuez financièrement, poussez le progrès",
-        "Parrainez l'innovation, construisez demain",
-        "Envisagez de soutenir : financez l'innovation",
-        "Votre don alimente le progrès",
-        "Donnez pouvoir aux rêves avec votre soutien",
-        "Rejoignez-nous : financez la liberté créative",
-        "Faites une différence : donnez aujourd'hui",
-        "Aidez-nous à stimuler l'innovation ouverte",
-        "Votre soutien, notre avenir",
-        "Investissez dans un meilleur demain",
-        "Chaque contribution favorise le changement",
-        "Soutenez-nous, façonnez l'avenir",
-        "Allumez le changement : soutenez la créativité open-source",
-        "Ensemble, nous pouvons innover sans limites",
-    };
-
-    const char *quotes_es[] = {
-        "Financia la creatividad, empodera sueños",
-        "Invierte en innovación abierta",
-        "Dona, empodera, crece, sostén",
-        "Apoya la innovación global hoy",
-        "Impulsa la revolución de código abierto",
-        "Contribuye fondos, impulsa el progreso",
-        "Patrocina la innovación, construye el mañana",
-        "Considera apoyar: financia la innovación",
-        "Tu donación impulsa el progreso",
-        "Empodera sueños con tu apoyo",
-        "Únete a nosotros: financia la libertad creativa",
-        "Haz un impacto: dona hoy",
-        "Ayúdanos a impulsar la innovación abierta",
-        "Tu apoyo, nuestro futuro",
-        "Invierte en un mejor mañana",
-        "Cada contribución impulsa el cambio",
-        "Apóyanos, forma el futuro",
-        "Enciende el cambio: apoya la creatividad de código abierto",
-        "Juntos, podemos innovar sin límites",
+        "Sekuro - Trust Tomorrow (because today is fucked)",
+        "Tesserent - Cyber Solutions powered by Thales (they're not actually involved)",
+        "CyberCX - Securing our communities, and our contracts with government",
+        "EY - Charging top rate for graduates and onshore offshore talent",
+        "Deloitte - Strengthen Cyber, Strengthen the Business, Strengthen our Wallets",
+        "KPMG - Build trust in your organisation, Build trust with us ;)",
+        "PwC - Securing Your Digital Future, Securing Your Ass",
+        "Proudly sponsored by Juicy Copper",
+        "Illustrious Jazz was here"
     };
 
     srand((uint32_t)time(NULL));
     int r = rand() % ARRAYLEN(quotes_en);
 
-    uint8_t lang = detect_current_lang();
-    switch (lang) {
-        case 2:
-            return quotes_fr[r];
-        case 3:
-            return quotes_es[r];
-        case 1:
-        default:
-            return quotes_en[r];
-    }
+    return quotes_en[r];
 }
 
 static void showBanner(void) {
@@ -225,8 +165,8 @@ static void showBanner(void) {
 
     PrintAndLogEx(NORMAL, "");
     PrintAndLogEx(NORMAL, "  [ " _YELLOW_("%s!")" ]", get_quote());
-    PrintAndLogEx(NORMAL, "     Patreon - https://www.patreon.com/iceman1001/");
-    PrintAndLogEx(NORMAL, "     Paypal  - https://www.paypal.me/iceman1001/");
+    PrintAndLogEx(NORMAL, "     LinkedIn - https://www.linkedin.com/in/deenoburgan/");
+    PrintAndLogEx(NORMAL, "     Juicy Copper - <REDACTED>");
     PrintAndLogEx(NORMAL, "");
 //    PrintAndLogEx(NORMAL, "   Monero");
 //    PrintAndLogEx(NORMAL, " 43mNJLpgBVaTvyZmX9ajcohpvVkaRy1kbZPm8tqAb7itZgfuYecgkRF36rXrKFUkwEGeZedPsASRxgv4HPBHvJwyJdyvQuP");
